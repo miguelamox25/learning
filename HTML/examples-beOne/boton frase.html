@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Palabra Clave</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #mensaje {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Escribe una palabra</h2>
+  <input type="text" id="entrada" placeholder="Escribe aquí">
+  <button onclick="verificarPalabra()">Verificar</button>
+
+  <div id="mensaje"></div>
+
+  <script>
+    function verificarPalabra() {
+      const palabra = document.getElementById("entrada").value.trim().toLowerCase();
+      const mensaje = document.getElementById("mensaje");
+
+      if (palabra === "secreto") {
+        mensaje.textContent = "¡Has descubierto la palabra secreta!";
+        mensaje.style.color = "green";
+      } else if (palabra === "") {
+        mensaje.textContent = "El campo está vacío. Escribe algo.";
+        mensaje.style.color = "orange";
+      } else {
+        mensaje.textContent = `La palabra "${palabra}" no es la clave.`;
+        mensaje.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>

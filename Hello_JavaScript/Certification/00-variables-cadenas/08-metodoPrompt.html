@@ -1,0 +1,28 @@
+<!--Metodo prompt()
+//Es una de las formas más simples de obtener entrada de un usuario a través de una pequeña ventana de diálogo emergente.-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Saludo Personalizado</title>
+</head>
+<body>
+
+    <button id="prompt-btn">Show Prompt</button>
+    <p id="output"></p>
+
+    <script>
+        const btn = document.getElementById("prompt-btn");
+        const output = document.getElementById("output");
+
+        btn.addEventListener("click", () => {
+            const userName = prompt("What is your name?", "Guest");
+            // Verificamos que el usuario no haya cancelado el prompt
+            if (userName !== null) {
+                output.textContent = "Hello, " + userName + "!";
+            }
+        });
+    </script>
+
+</body>
+</html>
