@@ -45,6 +45,8 @@ if (passwordIngresada.length >= 8){
     esValida = true
 }
 console.log(`La contraseña es ${esValida}`)
+// CORRECCION: let esValida = passwordIngresada.length >= 8;
+
 
 // 5. El departamento de IT necesita un "Slug" para la URL del perfil.
 // Toma el 'nombreLimpio', conviértelo todo a minúsculas y reemplaza 
