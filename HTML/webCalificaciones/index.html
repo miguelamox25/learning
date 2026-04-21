@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Calificaciones</title>
+    <link rel="stylesheet" href="dir/estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <header>
+            <h1>Control de Calificaciones</h1>
+            <p>Ingresa los valores (0 al 10) para calcular el promedio final del alumno.</p>
+        </header>
+
+        <main>
+            <section class="tarjeta-parcial" id="seccion-parcial-1">
+                <h2>Primer Parcial</h2>
+                <div class="grupo-inputs">
+                    <label>Actividades (20%):</label>
+                    <input type="number" id="actividades-1" min="0" max="10" step="0.1" placeholder="Ej. 8.5">
+
+                    <label>Prácticas (20%):</label>
+                    <input type="number" id="practicas-1" min="0" max="10" step="0.1">
+
+                    <label>Examen Práctico (25%):</label>
+                    <input type="number" id="ex-practico-1" min="0" max="10" step="0.1">
+
+                    <label>Examen Teórico (25%):</label>
+                    <input type="number" id="ex-teorico-1" min="0" max="10" step="0.1">
+
+                    <label>Asistencia (10%):</label>
+                    <input type="number" id="asistencia-1" min="0" max="10" step="0.1">
+                </div>
+                <div class="resultado-parcial">
+                    Calificación 1er Parcial: <span id="resultado-1">0.0</span>
+                </div>
+            </section>
+
+            <section class="tarjeta-parcial" id="seccion-parcial-2">
+                <h2>Segundo Parcial</h2>
+                <div class="grupo-inputs">
+                    <label>Actividades (20%):</label>
+                    <input type="number" id="actividades-2" min="0" max="10" step="0.1">
+
+                    <label>Prácticas (20%):</label>
+                    <input type="number" id="practicas-2" min="0" max="10" step="0.1">
+
+                    <label>Examen Práctico (25%):</label>
+                    <input type="number" id="ex-practico-2" min="0" max="10" step="0.1">
+
+                    <label>Examen Teórico (25%):</label>
+                    <input type="number" id="ex-teorico-2" min="0" max="10" step="0.1">
+
+                    <label>Asistencia (10%):</label>
+                    <input type="number" id="asistencia-2" min="0" max="10" step="0.1">
+                </div>
+                <div class="resultado-parcial">
+                    Calificación 2do Parcial: <span id="resultado-2">0.0</span>
+                </div>
+            </section>
+        </main>
+
+        <footer class="seccion-final">
+            <button id="btn-calcular">Calcular Promedios</button>
+            <div class="caja-calificacion-final">
+                <h2>Calificación Final: <span id="calificacion-final">0.0</span></h2>
+            </div>
+        </footer>
+    </div>
+
+    <script src="logica.js"></script>
+</body>
+</html>
